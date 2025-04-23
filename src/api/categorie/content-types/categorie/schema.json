@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "categorie",
+    "pluralName": "categories",
+    "displayName": "Catégorie"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "recette": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::recette.recette",
+      "mappedBy": "category"
+    }
+  }
+}
